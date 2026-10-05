@@ -1,0 +1,344 @@
+{
+  "Version": "0.4.0",
+  "Author": "Ci (Cisanotheraccount)",
+  "Name": "Bambu Status",
+  "Description": "Local Bambu Lab monitoring, AMS, camera and finished-part reminders for Ulanzi D200X.",
+  "Icon": "assets/icons/plugin.png",
+  "Category": "3D Printing",
+  "CategoryIcon": "assets/icons/plugin.png",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "PrivateAPI": true,
+  "SupportedInMultiActions": false,
+  "UUID": "com.ulanzi.ulanzistudio.bambustatus",
+  "Actions": [
+    {
+      "Name": "Status",
+      "Icon": "assets/icons/status.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Status",
+          "Image": "assets/icons/status.png"
+        }
+      ],
+      "Tooltip": "Printer state and progress",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.status",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Progress",
+      "Icon": "assets/icons/progress.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Progress",
+          "Image": "assets/icons/progress.png"
+        }
+      ],
+      "Tooltip": "Print progress percentage",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.progress",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "ETA",
+      "Icon": "assets/icons/time.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "ETA",
+          "Image": "assets/icons/time.png"
+        }
+      ],
+      "Tooltip": "Remaining time and finish estimate with next-day offset",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.eta",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Layers",
+      "Icon": "assets/icons/layers.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Layers",
+          "Image": "assets/icons/layers.png"
+        }
+      ],
+      "Tooltip": "Current and total layers",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.layers",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Nozzle",
+      "Icon": "assets/icons/nozzle.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Nozzle",
+          "Image": "assets/icons/nozzle.png"
+        }
+      ],
+      "Tooltip": "Nozzle temperature",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.nozzle",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Bed",
+      "Icon": "assets/icons/bed.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Bed",
+          "Image": "assets/icons/bed.png"
+        }
+      ],
+      "Tooltip": "Heat bed temperature",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.bed",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Fans",
+      "Icon": "assets/icons/fans.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Fans",
+          "Image": "assets/icons/fans.png"
+        }
+      ],
+      "Tooltip": "Part, auxiliary, and chamber fan speeds",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.fans",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "AMS",
+      "Icon": "assets/icons/ams.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "AMS",
+          "Image": "assets/icons/ams.png"
+        }
+      ],
+      "Tooltip": "AMS filament colors, materials, and remaining amount",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.ams",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "File",
+      "Icon": "assets/icons/file.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "File",
+          "Image": "assets/icons/file.png"
+        }
+      ],
+      "Tooltip": "Current print file",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.file",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Errors",
+      "Icon": "assets/icons/error.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Errors",
+          "Image": "assets/icons/error.png"
+        }
+      ],
+      "Tooltip": "Print and HMS errors",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.errors",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Connection",
+      "Icon": "assets/icons/connection.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Connection",
+          "Image": "assets/icons/connection.png"
+        }
+      ],
+      "Tooltip": "MQTT connection and last update",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.connection",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Light",
+      "Icon": "assets/icons/light.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Light",
+          "Image": "assets/icons/light.png"
+        }
+      ],
+      "Tooltip": "Show and toggle the P1S chamber light",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.light",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Camera",
+      "Icon": "assets/icons/camera.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Camera",
+          "Image": "assets/icons/camera.png"
+        }
+      ],
+      "Tooltip": "Live camera; long-press for a 13-tile full-page view",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.camera",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    },
+    {
+      "Name": "Custom Tile",
+      "Icon": "assets/icons/custom.png",
+      "PropertyInspectorPath": "property-inspector/setup/inspector.html",
+      "state": 0,
+      "States": [
+        {
+          "Name": "Custom",
+          "Image": "assets/icons/custom.png"
+        }
+      ],
+      "Tooltip": "Choose any Bambu status tile",
+      "UUID": "com.ulanzi.ulanzistudio.bambustatus.custom",
+      "Controllers": [
+        "Keypad"
+      ],
+      "Devices": [
+        "D200X"
+      ],
+      "SupportedInMultiActions": false,
+      "DisableAutomaticStates": true
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "12.0"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Software": {
+    "MinVersion": "3.0.11"
+  },
+  "Overview": "A local-first Bambu Lab dashboard on your Ulanzi D200X.",
+  "Detail": "Community plugin. Discover and pair a local printer using its LAN Access Code. View progress, ETA, layers, temperatures, AMS and camera. Local bed reminders are advisory. Only chamber-light control is included. See the GitHub compatibility table before installing.",
+  "Banner": [
+    "assets/banners/banner-monitor.png",
+    "assets/banners/banner-ams.png",
+    "assets/banners/banner-reminder.png"
+  ]
+}

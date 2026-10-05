@@ -1,0 +1,8 @@
+{
+  "Localization": {
+    "Bambu Status": "Bambu Status",
+    "Description": "Local Bambu Lab monitoring, AMS, camera and finished-part reminders for Ulanzi D200X.",
+    "Overview": "A local-first Bambu Lab dashboard on your Ulanzi D200X.",
+    "Detail": "Community plugin. Discover and pair a local printer using its LAN Access Code. View progress, ETA, layers, temperatures, AMS and camera. Local bed reminders are advisory. Only chamber-light control is included. See the GitHub compatibility table before installing."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "App": "",
+  "Device": {
+    "Model": "D200X",
+    "UUID": ""
+  },
+  "Icon": "preview.png",
+  "Name": "Bambu Status",
+  "Pages": {
+    "Current": "0f041ce0-283b-4474-8430-ed6c837c9fa4",
+    "Pages": [
+      "0f041ce0-283b-4474-8430-ed6c837c9fa4"
+    ]
+  },
+  "Version": "2.0"
+}

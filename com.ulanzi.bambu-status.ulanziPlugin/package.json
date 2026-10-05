@@ -1,0 +1,31 @@
+{
+  "name": "ulanzi-bambu-status",
+  "version": "0.4.0",
+  "description": "Local-first Bambu Lab monitoring, AMS, camera, and finished-part reminders for Ulanzi D200X.",
+  "type": "module",
+  "main": "plugin/app.js",
+  "scripts": {
+    "build:vision": "node scripts/build-vision-helper.js",
+    "build:native": "node scripts/build-vision-helper.js",
+    "test": "node scripts/run-tests.js",
+    "smoke": "node test/smoke-run.mjs",
+    "validate": "node scripts/validate.js",
+    "check": "npm run build:native && npm run validate && node --check plugin/app.js && npm test && npm run smoke"
+  },
+  "keywords": [
+    "ulanzi",
+    "d200x",
+    "bambu-lab",
+    "mqtt",
+    "3d-printing"
+  ],
+  "author": "Ci (Cisanotheraccount)",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^5.14.1",
+    "ws": "^8.18.3",
+    "jpeg-js": "0.4.4",
+    "pngjs": "7.0.0"
+  },
+  "engines": { "node": ">=20.12.2" }
+}

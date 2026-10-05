@@ -1,0 +1,17 @@
+{
+  "name": "bambu-status",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["com.ulanzi.bambu-status.ulanziPlugin"],
+  "scripts": {
+    "check": "npm run check --workspace ulanzi-bambu-status && node scripts/audit-release.mjs",
+    "test": "npm test --workspace ulanzi-bambu-status",
+    "build": "npm run build:native --workspace ulanzi-bambu-status",
+    "assets": "node scripts/render-assets.mjs",
+    "package": "node scripts/package-release.mjs",
+    "audit:release": "node scripts/audit-release.mjs"
+  },
+  "devDependencies": { "sharp": "0.35.5", "yazl": "3.3.1", "playwright": "1.55.1" },
+  "engines": { "node": ">=20.12.2" }
+}

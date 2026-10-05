@@ -1,0 +1,8 @@
+{
+  "Localization": {
+    "Bambu Status": "Bambu Status",
+    "Description": "Ulanzi D200X 上的 Bambu Lab 本地监控、AMS、摄像头与取件提醒。",
+    "Overview": "把打印进度、耗材和画面留在桌面上。",
+    "Detail": "社区插件。局域网发现打印机，使用 LAN Access Code 首次配对。显示进度、预计结束时间、层数、温度、AMS 与画面。盘面检测为本地辅助提醒，仅保留仓内灯控制。安装前请查看 GitHub 兼容矩阵。"
+  }
+}

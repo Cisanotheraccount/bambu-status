@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./inspector.css">
+  <script src="../../libs/js/constants.js"></script>
+  <script src="../../libs/js/eventEmitter.js"></script>
+  <script src="../../libs/js/timers.js"></script>
+  <script src="../../libs/js/utils.js"></script>
+  <script src="../../libs/js/ulanziApi.js"></script>
+</head>
+<body>
+  <header><strong>Bambu Status</strong><span>0.4.0</span></header>
+  <form id="settings">
+    <section>
+      <h2 data-en="Printer" data-zh="打印机">Printer</h2>
+      <div class="inline"><select id="printers" aria-label="Discovered printer"><option value="">Select a printer</option></select><button type="button" id="discover" data-en="Find" data-zh="查找">Find</button></div>
+      <div id="discovery-status" class="feedback" role="status"></div>
+      <label><span data-en="Local IP / hostname" data-zh="本地 IP / 主机名">Local IP / hostname</span><input id="host" autocomplete="off" spellcheck="false" placeholder="printer.local"></label>
+      <label><span data-en="Serial number" data-zh="序列号">Serial number</span><input id="serial" autocomplete="off" spellcheck="false"></label>
+      <label><span data-en="Model" data-zh="型号">Model</span><select id="model"><option>Auto</option><option>P1S</option><option>P1P</option><option>A1</option><option>A1 mini</option><option>X1 Carbon</option><option>X1</option><option>X1E</option><option>Other</option></select></label>
+      <label><span data-en="LAN Access Code" data-zh="LAN Access Code">LAN Access Code</span><input id="access-code" type="password" autocomplete="new-password" maxlength="8" spellcheck="false"></label>
+      <button type="button" id="pair" class="primary" data-en="Pair printer" data-zh="配对打印机">Pair printer</button>
+      <div id="pair-status" class="feedback" role="status"></div>
+    </section>
+    <section>
+      <h2 data-en="Tile" data-zh="显示组件">Tile</h2>
+      <label id="role-row"><span data-en="Display" data-zh="显示内容">Display</span><select name="tileRole"><option value="status">Status</option><option value="progress">Progress</option><option value="eta">ETA</option><option value="layers">Layers</option><option value="nozzle">Nozzle</option><option value="bed">Bed</option><option value="fans">Fans</option><option value="ams">AMS</option><option value="file">File</option><option value="errors">Errors</option><option value="connection">Connection</option><option value="light">Light</option><option value="camera">Camera</option><option value="wifi">WiFi</option><option value="updated">Updated</option></select></label>
+      <label id="ams-row"><span data-en="AMS unit" data-zh="AMS 单元">AMS unit</span><select name="amsUnit"><option value="auto">Auto / All</option></select></label>
+      <label class="check"><input name="showText" type="checkbox" checked><span data-en="Text" data-zh="显示文字">Text</span></label>
+    </section>
+    <section>
+      <h2 data-en="Bed reminder" data-zh="取件提醒">Bed reminder</h2>
+      <label class="check"><input name="bedCheckEnabled" type="checkbox" checked><span data-en="Local detection" data-zh="本地检测">Local detection</span></label>
+      <div class="inline"><button type="button" id="capture-on" data-en="Capture: light on" data-zh="采集：灯开启">Capture: light on</button><button type="button" id="capture-off" data-en="Capture: light off" data-zh="采集：灯关闭">Capture: light off</button></div>
+      <button type="button" id="check-bed" data-en="Check bed" data-zh="检测盘面">Check bed</button>
+      <div id="bed-status" class="feedback" role="status"></div>
+    </section>
+    <section>
+      <h2 data-en="Connection & cache" data-zh="连接与缓存">Connection & cache</h2>
+      <label><span data-en="Refresh" data-zh="刷新间隔">Refresh</span><select name="refreshInterval"><option value="1">1s</option><option value="2" selected>2s</option><option value="5">5s</option><option value="10">10s</option></select></label>
+      <label class="check"><input name="tlsVerify" type="checkbox"><span data-en="Strict TLS certificate check" data-zh="严格校验证书">Strict TLS certificate check</span></label>
+      <label><span data-en="FFmpeg path (X1 camera)" data-zh="FFmpeg 路径（X1 摄像头）">FFmpeg path (X1 camera)</span><input name="ffmpegPath" autocomplete="off" spellcheck="false" placeholder="ffmpeg"></label>
+      <label class="check"><input name="cameraCacheEnabled" type="checkbox" checked><span data-en="Keep three local snapshots" data-zh="保留三张本地采样图">Keep three local snapshots</span></label>
+      <label><span data-en="Snapshot interval" data-zh="采样间隔">Snapshot interval</span><select name="cameraCacheInterval"><option value="30">30s</option><option value="60" selected>1m</option><option value="120">2m</option><option value="300">5m</option></select></label>
+    </section>
+  </form>
+  <footer><span id="connection-status" role="status">Connecting to Studio</span></footer>
+  <script src="./inspector.js"></script>
+</body>
+</html>

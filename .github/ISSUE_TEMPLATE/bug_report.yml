@@ -1,0 +1,24 @@
+name: Bug report
+description: A reproducible problem with a verified or experimental configuration
+body:
+  - type: markdown
+    attributes:
+      value: "Do not post Access Codes, serial numbers, account tokens, private camera photos, or complete settings files."
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration
+      description: Plugin/Studio version, OS, printer model/firmware, and AMS types (no private device identity)
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps, expected result, and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: Review attachments for private information before sharing

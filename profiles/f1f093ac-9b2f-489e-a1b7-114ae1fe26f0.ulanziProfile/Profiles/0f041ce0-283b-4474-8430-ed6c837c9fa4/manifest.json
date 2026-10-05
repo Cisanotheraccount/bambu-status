@@ -1,0 +1,258 @@
+{
+  "Controllers": [
+    {
+      "Actions": {
+        "0_0": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.status",
+          "ActionID": "411ba7a2-f6f9-4bf8-a0d9-edf507b4e6f4",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "status",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "1_0": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.progress",
+          "ActionID": "fe1f5c44-31c2-4553-ae49-98e8370f46d0",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "progress",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "2_0": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.eta",
+          "ActionID": "be36a25a-d02e-4c8d-a222-f8e1f8a5a36c",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "eta",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "3_0": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.layers",
+          "ActionID": "9fdff00a-9843-4a5d-a4a1-f12bedfa57af",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "layers",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "4_0": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.errors",
+          "ActionID": "d6b7307e-0da3-4e1b-a871-8c30a5778200",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "errors",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "0_1": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.bed",
+          "ActionID": "9e4690b9-6e10-4eab-a47a-43501bbc7a21",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "bed",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "1_1": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.nozzle",
+          "ActionID": "16235b0c-42dd-4814-a39e-1a8764859d22",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "nozzle",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "2_1": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.fans",
+          "ActionID": "0ddb96dd-f4c2-424e-a729-daf3825ed7ac",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "fans",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "3_1": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.ams",
+          "ActionID": "01c1847d-346f-4160-aba0-18783125c8d6",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "AMS 1",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "4_1": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.ams",
+          "ActionID": "152b60de-1f97-47b2-ae62-b7b21eb97197",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "AMS 2",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "0_2": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.connection",
+          "ActionID": "a0a94ab4-6cf3-4b14-a8ee-57423834033b",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "connection",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "1_2": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.light",
+          "ActionID": "fad9c77f-0ddd-4430-a89c-a86de0a99479",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "light",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        },
+        "2_2": {
+          "Action": "com.ulanzi.ulanzistudio.bambustatus.camera",
+          "ActionID": "3c62cb3c-62cb-4f3a-a7a2-76d1d1b78bb3",
+          "ActionParam": {
+            "tileRole": "auto",
+            "showText": "true",
+            "amsUnit": "auto"
+          },
+          "LinkedTitle": false,
+          "Name": "camera",
+          "Plugin": {},
+          "State": 0,
+          "ViewParam": [
+            {
+              "IconRel": "",
+              "Text": ""
+            }
+          ]
+        }
+      },
+      "Type": "Keypad"
+    }
+  ],
+  "Icon": "",
+  "Name": "Bambu Status"
+}
