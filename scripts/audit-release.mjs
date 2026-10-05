@@ -6,6 +6,7 @@ const errors = [];
 const ignored = new Set(["node_modules", ".git", "dist", "artifacts", ".build"]);
 async function inspect(directory) {
   for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
+    if (entry.name === ".git" && directory !== root) errors.push(`Nested Git metadata: ${path.relative(root, directory)}`);
     if (ignored.has(entry.name)) continue;
     const file = path.join(directory, entry.name);
     if (entry.isDirectory()) { await inspect(file); continue; }

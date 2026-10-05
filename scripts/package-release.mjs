@@ -17,7 +17,7 @@ await fs.rm(staging, { recursive: true, force: true }); await fs.mkdir(staging, 
 const target = path.join(staging, name);
 await fs.mkdir(target);
 for (const entry of ["manifest.json", "package.json", "package-lock.json", "plugin", "libs", "assets", "property-inspector", "native", "en.json", "zh_CN.json"]) {
-  await fs.cp(path.join(source, entry), path.join(target, entry), { recursive: true });
+  await fs.cp(path.join(source, entry), path.join(target, entry), { recursive: true, filter: (file) => ![".git", ".DS_Store", ".gitignore"].includes(path.basename(file)) });
 }
 if (platform === "darwin") {
   for (const helper of ["credential-helper", "bed-vision"]) if (!await fs.stat(path.join(target, "native", helper)).catch(() => null)) throw new Error("Build the macOS native helpers before packaging");
