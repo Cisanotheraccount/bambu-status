@@ -8,7 +8,7 @@ macOS helpers are locally ad-hoc signed universal binaries, not Developer ID not
 | --- | --- | --- |
 | P1S + D200X + macOS arm64 | Local MQTT, JPEG camera, Vision-assisted local detection, Keychain | The private 0.3.5 baseline was used by the project owner; 0.4.0 public onboarding still needs a fresh physical acceptance run |
 | macOS Intel | Universal native helpers; portable decode | Cross-built; no Intel/D200X physical acceptance claim |
-| Windows 10+ | Portable JPEG/PNG comparison, DPAPI via PowerShell | Automated runner checks only; no Windows/D200X physical acceptance claim |
+| Windows 10+ | Portable JPEG/PNG comparison, DPAPI via PowerShell | 90 tests and smoke check passed on Windows CI, including real disposable-fixture DPAPI round trip; no Windows/D200X physical acceptance claim |
 | P1P / A1 / A1 mini | Shared MQTT fields; experimental local JPEG path | Needs model and firmware reports plus physical camera validation |
 | X1 / X1 Carbon / X1E | MQTT fields; experimental RTSPS-to-JPEG through external FFmpeg | Needs physical validation; FFmpeg is not included |
 | H2 / other models | Shared fields may work; dual-nozzle and new capabilities not explicitly adapted | Not supported as a validated combination in this preview |

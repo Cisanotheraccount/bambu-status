@@ -22,6 +22,8 @@ A local-first Bambu Lab dashboard for Ulanzi D200X. This is an independent commu
 
 Local macOS release checks passed on 2026-10-05: manifest/syntax, smoke test, release-source audit, 89 passing tests and one Windows-only skipped test. The two plugin ZIPs passed integrity checks and dependency audits. Responsive settings checks passed at 260, 360 and 560 pixels. These checks are not physical printer acceptance tests.
 
+[GitHub CI passed on Linux, macOS and Windows](https://github.com/Cisanotheraccount/bambu-status/actions/runs/37270460341). Windows ran all 90 tests, including an actual DPAPI encrypted-file round trip with a disposable fixture; macOS/Linux passed 89 and skipped that Windows-only test. The Windows helper isolates its system module path to avoid inherited PowerShell 7 module conflicts. No real printer credentials were used by these checks.
+
 P1S + macOS + D200X is the development baseline. The new 0.4.0 pairing flow, Windows/Intel hardware combinations and other printers still need physical acceptance. X1 RTSPS is experimental and requires a user-provided FFmpeg executable; FFmpeg is not bundled. macOS native helpers are ad-hoc signed, not Developer ID notarized.
 
 Bed reminders are advisory, not guaranteed object recognition or a safety interlock. Missing data stays unavailable; humidity levels are not invented percentages. The saved ETA is the first estimate observed by this plugin, not necessarily the actual print-start estimate.
