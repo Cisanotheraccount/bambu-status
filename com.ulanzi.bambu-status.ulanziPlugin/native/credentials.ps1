@@ -1,5 +1,7 @@
 $ErrorActionPreference = 'Stop'
 try {
+    # Node may inherit PowerShell 7 paths that Windows PowerShell cannot load.
+    $env:PSModulePath = [IO.Path]::Combine($PSHOME, 'Modules')
     $request = [Console]::In.ReadToEnd() | ConvertFrom-Json
     if ($request.id -notmatch '^[a-f0-9]{16}$') { throw 'Invalid ID' }
     $directory = Join-Path $request.baseDir 'credentials'
