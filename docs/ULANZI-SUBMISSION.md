@@ -2,6 +2,10 @@
 
 Prepared 2026-10-05. Submission and platform approval must be recorded separately. The preview does not claim official endorsement.
 
+## Submission status
+
+Submitted on 2026-10-05. The owner's Ulanzi Personal Center shows **Bambu Status** under **Works under review**. It has not been approved or listed publicly as of this check. No public marketplace URL is claimed. The submitted archive matches the GitHub macOS universal asset (SHA-256 `24670f5411a033dc161fa4e25fb1aaeec8d385f22beeab91701b7680591ce4ae`) and contains the Windows credential script as well.
+
 ## Assets
 
 - Category: Plugins; supported device: D200X.
