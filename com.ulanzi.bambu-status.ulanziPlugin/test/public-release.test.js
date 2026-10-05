@@ -4,6 +4,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import os from "node:os";
 import { EventEmitter } from "node:events";
+import { spawn } from "node:child_process";
 import jpeg from "jpeg-js";
 import { PNG } from "pngjs";
 import { dataDirectory, printerId, printerDirectory, redactDiagnostic } from "../plugin/platform.js";
@@ -133,9 +134,20 @@ test("Windows DPAPI protects and round-trips a disposable fixture", { skip: proc
     const script = fileURLToPath(new URL("../native/credentials.ps1", import.meta.url));
     const args = ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", script];
     const request = { id: printerId("DISPOSABLE-FIXTURE"), baseDir: directory };
-    await runHelper("powershell.exe", args, { ...request, operation: "set", secret: "EXAMPLE1" });
+    let diagnostic = "";
+    const fixtureSpawn = (...params) => {
+      const child = spawn(...params);
+      child.stderr.on("data", (chunk) => { diagnostic += chunk; });
+      return child;
+    };
+    const invoke = async (operation, secret = "") => {
+      diagnostic = "";
+      try { return await runHelper("powershell.exe", args, { ...request, operation, secret }, { spawn: fixtureSpawn }); }
+      catch { throw new Error(`Disposable DPAPI fixture ${operation} failed: ${diagnostic}`); }
+    };
+    await invoke("set", "EXAMPLE1");
     const file = path.join(directory, "credentials", `${request.id}.dpapi`);
     assert.equal((await fs.readFile(file, "utf8")).includes("EXAMPLE1"), false);
-    assert.equal((await runHelper("powershell.exe", args, { ...request, operation: "get" })).secret, "EXAMPLE1");
+    assert.equal((await invoke("get")).secret, "EXAMPLE1");
   } finally { await fs.rm(directory, { recursive: true, force: true }); }
 });

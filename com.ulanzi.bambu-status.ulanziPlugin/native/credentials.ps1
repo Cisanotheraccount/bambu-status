@@ -31,4 +31,9 @@ try {
         'delete' { if (Test-Path $file) { Remove-Item $file }; [Console]::Out.Write('{"status":"deleted"}') }
         default { throw 'Invalid operation' }
     }
-} catch { [Console]::Error.Write('Credential storage failed'); exit 2 }
+} catch {
+    $line = $_.InvocationInfo.ScriptLineNumber
+    $kind = $_.Exception.GetType().Name
+    [Console]::Error.Write("Credential storage failed: $kind at line $line")
+    exit 2
+}
